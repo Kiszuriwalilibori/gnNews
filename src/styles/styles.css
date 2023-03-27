@@ -148,6 +148,7 @@ a {
   /*sizes */
   --header-height: 120px;
   --footer-height: 76px;
+  --tile-width: 360px;
 }
 
 :root {
@@ -161,6 +162,7 @@ a {
   /*sizes */
   --header-height: 120px;
   --footer-height: 76px;
+  --tile-width: 360px;
 }
 
 :root {
@@ -174,6 +176,7 @@ a {
   /*sizes */
   --header-height: 120px;
   --footer-height: 76px;
+  --tile-width: 360px;
 }
 
 #root {
@@ -362,7 +365,7 @@ hr {
   padding: 10px;
 }
 .main--withTiles .tile {
-  width: 240px;
+  width: var(--tile-width);
   border-radius: 10px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
   border-style: solid;
@@ -375,7 +378,7 @@ hr {
   transition: transform 0.7s ease-in-out;
 }
 .main--withTiles .tile:hover {
-  transform: translateY(5px);
+  transform: translateY(2px);
 }
 .main--withTiles .tile :not(:first-child) {
   padding: 10px 15px;
@@ -386,8 +389,8 @@ hr {
   border-bottom-width: thin;
 }
 .main--withTiles .tile__image-container {
-  width: 240px;
-  height: 150px;
+  width: --tile-width;
+  height: calc(var(--tile-width) / 1.6);
   border-radius: 10px 10px 0 0;
 }
 .main--withTiles .tile__image {
@@ -400,14 +403,10 @@ hr {
 .main--withTiles .tile__title {
   line-height: 1.7;
   font-weight: bold;
-  max-height: 70px;
+  max-height: 110px;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   word-wrap: break-word;
-  transition: max-height 1s;
-}
-.main--withTiles .tile__title:hover {
-  max-height: 300px;
 }
 .main--withTiles .tile__published {
   font-size: 16px;
@@ -420,12 +419,8 @@ hr {
 .main--withTiles .tile__description {
   font-size: 16px;
   line-height: 1.2;
-  max-height: 100px;
-  overflow: hidden;
-  transition: max-height 1s;
-}
-.main--withTiles .tile__description:hover {
-  max-height: 300px;
+  max-height: 160px;
+  overflow: auto;
 }
 .main .listItem {
   width: 100%;

@@ -11,7 +11,7 @@
         padding: 10px;
 
         & .tile {
-            width: 240px;
+            width: var(--tile-width);
             border-radius: 10px;
             @include boxshadow1;
             border-style: solid;
@@ -23,7 +23,7 @@
             padding-bottom: 10px;
             transition: transform 0.7s ease-in-out;
             &:hover {
-                transform: translateY(5px);
+                transform: translateY(2px);
             }
             & :not(:first-child) {
                 padding: 10px 15px;
@@ -34,8 +34,8 @@
                 border-bottom-width: thin;
             }
             &__image-container {
-                width: 240px;
-                height: 150px;
+                width: (--tile-width);
+                height: calc(var(--tile-width) / 1.6);
                 border-radius: 10px 10px 0 0;
             }
             &__image {
@@ -47,12 +47,12 @@
             &__title {
                 line-height: 1.7;
                 font-weight: bold;
-                max-height: 70px;
+                max-height: 110px;
                 width: 100%;
-                overflow: hidden;
+                overflow: auto;
                 word-wrap: break-word;
 
-                @include resizesOnHover;
+                // @include resizesOnHover;
             }
             &__published {
                 font-size: 16px;
@@ -65,9 +65,9 @@
             &__description {
                 font-size: 16px;
                 line-height: 1.2;
-                max-height: 100px;
-                overflow: hidden;
-                @include resizesOnHover;
+                max-height: 160px;
+                overflow: auto;
+                // @include resizesOnHover;
             }
         }
     }

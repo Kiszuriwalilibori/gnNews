@@ -1,27 +1,21 @@
 import uuid from "react-uuid";
 
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router";
+import { isEmpty } from "lodash";
 
 import Popup from "./popup";
+import useMainLayout from "../../hooks/useMainLayout";
+import useClearCountries from "../../hooks/useClearCountries";
 
 import { Article } from "../../types";
 import { getCountryNews } from "../../reduxware/selectors";
-import { useDispatchAction } from "../../hooks/useDispatchAction";
-import useMainLayout from "../../hooks/useMainLayout";
-import { getCountryPaths } from "../../reduxware/selectors";
-import { isEmpty } from "lodash";
 
 export default function Main() {
+    useClearCountries();
     const countryNews = useSelector(getCountryNews);
-    const pathName = useLocation().pathname;
-    const { clearSelectedCountry } = useDispatchAction();
-    const countryPaths = useSelector(getCountryPaths);
     const { mainClassName, MainItem } = useMainLayout();
 
     if (!countryNews || isEmpty(countryNews)) return null;
-
-    if (!countryPaths.includes(pathName)) clearSelectedCountry();
 
     return (
         <main className={mainClassName}>
