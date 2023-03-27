@@ -1,6 +1,10 @@
+import { LayoutLikeObject } from "./types";
+
 export const countryCodes = ["nl", "pl"];
 export const countriesPath = "/countries/";
 
+// export const mainClassNames: LayoutLikeObject = { list: "main main--withList", tile: "main main--withTiles" };
+export const mainClassNames: LayoutLikeObject = { list: "main--withList", tile: "main--withTiles" };
 // cachcncocuczdeegfrgbgrhkhuidieilinitjpkrltlvmamxmyngnlnonzphplptrorsrusasesgsiskthtrtwuausveza,
 
 export const countryList = {
@@ -254,12 +258,12 @@ export const countryList = {
     ZW: "Zimbabwe",
     AX: "Åland Islands",
 };
-
+export const sourceNamePL = "fake source name PL";
 export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Onet",
         title: "Przełom w sprawie wycieczek młodzieży z Izraela. Jest umowa - Onet",
@@ -275,7 +279,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Transfery.info",
         title: "Reprezentacja Polski: Prawdopodobny skład na mecz z Czechami - Transfery.info",
@@ -291,7 +295,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Pudelek",
         title: 'Tak Joanna Opozda wyglądała jeszcze kilka lat temu w JASNYM BLONDZIE: "Właśnie dlatego już nie rozjaśniam włosów" (FOTO) - Pudelek',
@@ -305,7 +309,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Money.pl",
         title: "Podatek od trzynastej emerytury. Cześć seniorów odzyska pieniądze. Oto sposób - Money.pl",
@@ -319,7 +323,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "TVP Info",
         title: "Zandberg odpowiada Tuskowi: Neoliberalizm skończył się przejęciem władzy przez PiS - TVP Info",
@@ -333,7 +337,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "PAP",
         title: "MSZ: wizyta księcia Williama w Polsce poświęcona jest przede wszystkim wsparciu dla Ukrainy i Polski - PAP",
@@ -347,7 +351,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Money.pl",
         title: "Branża drzewna w tarapatach. Przemysł traci swoją konkurencyjność - Money.pl",
@@ -361,7 +365,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Onet",
         title: "Córka Cruise'a idzie do college'u. Aktor od 10 lat nie odzywa się do Suri - Onet",
@@ -375,7 +379,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "WP Wiadomości",
         title: "Wierny pies Putina. Miedwiediew znów próbuje siać zamęt - WP Wiadomości",
@@ -389,7 +393,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "TVP Info",
         title: "Niemiecki koncern na liście „międzynarodowych sponsorów wojny” - TVP Info",
@@ -403,7 +407,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Wp.pl",
         title: 'Jarek przeszedł metamorfozę? "Ja mam kondycję" - Wp.pl',
@@ -417,7 +421,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "TVP Info",
         title: "Republikański kontrkandydat Trumpa: Putin to zbrodniarz, trzeba go rozliczyć - TVP Info",
@@ -431,7 +435,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Sportowefakty",
         title: 'Wskazała powód słabszej dyspozycji Igi Świątek. "Myślę, że to nasza wina" - Sportowefakty',
@@ -445,7 +449,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "TVP Info",
         title: "Ponad 25 tys. zł kary dla szpitala, w którym pracuje Mama Ginekolog - TVP Info",
@@ -459,7 +463,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Do Rzeczy",
         title: "Ukraina. Ostrzał Zaporoża. Uszkodzonych ponad 300 mieszkań - Do Rzeczy",
@@ -473,7 +477,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "BusinessInsider",
         title: "Ile zarabiają policjanci? Za mało. Zwłaszcza w dużych miastach odchodzą na potęgę - BusinessInsider",
@@ -487,7 +491,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "BusinessInsider",
         title: "Fed widzi, że banki padają. W efekcie podniesie stopy procentowe jeszcze tylko raz - BusinessInsider",
@@ -501,7 +505,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Gazeta Wyborcza",
         title: "Wielka afera ze sprzętem przeciw COVID-19. Kto w obozie władzy za nią odpowie? - Gazeta Wyborcza",
@@ -515,7 +519,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "Interia Biznes",
         title: "Google przedstawił Barda. Na razie tylko w USA i Wielkiej Brytanii - Interia Biznes",
@@ -529,7 +533,7 @@ export const articlesPL = [
     {
         source: {
             id: "google-news",
-            name: "fake source name PL",
+            name: sourceNamePL,
         },
         author: "TVN24",
         title: "Atak Rosji na Ukrainę. Relacja na żywo 23 marca 2023 - TVN24",
@@ -540,11 +544,12 @@ export const articlesPL = [
         content: null,
     },
 ];
+export const sourceNameFR = "fake source name FR";
 export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Onet",
         title: "Przełom w sprawie wycieczek młodzieży z Izraela. Jest umowa - Onet",
@@ -560,7 +565,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Transfery.info",
         title: "Reprezentacja Polski: Prawdopodobny skład na mecz z Czechami - Transfery.info",
@@ -576,7 +581,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Pudelek",
         title: 'Tak Joanna Opozda wyglądała jeszcze kilka lat temu w JASNYM BLONDZIE: "Właśnie dlatego już nie rozjaśniam włosów" (FOTO) - Pudelek',
@@ -590,7 +595,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Money.pl",
         title: "Podatek od trzynastej emerytury. Cześć seniorów odzyska pieniądze. Oto sposób - Money.pl",
@@ -604,7 +609,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "TVP Info",
         title: "Zandberg odpowiada Tuskowi: Neoliberalizm skończył się przejęciem władzy przez PiS - TVP Info",
@@ -618,7 +623,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "PAP",
         title: "MSZ: wizyta księcia Williama w Polsce poświęcona jest przede wszystkim wsparciu dla Ukrainy i Polski - PAP",
@@ -632,7 +637,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Money.pl",
         title: "Branża drzewna w tarapatach. Przemysł traci swoją konkurencyjność - Money.pl",
@@ -646,7 +651,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Onet",
         title: "Córka Cruise'a idzie do college'u. Aktor od 10 lat nie odzywa się do Suri - Onet",
@@ -660,7 +665,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "WP Wiadomości",
         title: "Wierny pies Putina. Miedwiediew znów próbuje siać zamęt - WP Wiadomości",
@@ -674,7 +679,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "TVP Info",
         title: "Niemiecki koncern na liście „międzynarodowych sponsorów wojny” - TVP Info",
@@ -688,7 +693,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Wp.pl",
         title: 'Jarek przeszedł metamorfozę? "Ja mam kondycję" - Wp.pl',
@@ -702,7 +707,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "TVP Info",
         title: "Republikański kontrkandydat Trumpa: Putin to zbrodniarz, trzeba go rozliczyć - TVP Info",
@@ -716,7 +721,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Sportowefakty",
         title: 'Wskazała powód słabszej dyspozycji Igi Świątek. "Myślę, że to nasza wina" - Sportowefakty',
@@ -730,7 +735,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "TVP Info",
         title: "Ponad 25 tys. zł kary dla szpitala, w którym pracuje Mama Ginekolog - TVP Info",
@@ -744,7 +749,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Do Rzeczy",
         title: "Ukraina. Ostrzał Zaporoża. Uszkodzonych ponad 300 mieszkań - Do Rzeczy",
@@ -758,7 +763,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "BusinessInsider",
         title: "Ile zarabiają policjanci? Za mało. Zwłaszcza w dużych miastach odchodzą na potęgę - BusinessInsider",
@@ -772,7 +777,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "BusinessInsider",
         title: "Fed widzi, że banki padają. W efekcie podniesie stopy procentowe jeszcze tylko raz - BusinessInsider",
@@ -786,7 +791,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Gazeta Wyborcza",
         title: "Wielka afera ze sprzętem przeciw COVID-19. Kto w obozie władzy za nią odpowie? - Gazeta Wyborcza",
@@ -800,7 +805,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "Interia Biznes",
         title: "Google przedstawił Barda. Na razie tylko w USA i Wielkiej Brytanii - Interia Biznes",
@@ -814,7 +819,7 @@ export const articlesFR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name FR",
+            name: sourceNameFR,
         },
         author: "TVN24",
         title: "Atak Rosji na Ukrainę. Relacja na żywo 23 marca 2023 - TVN24",
@@ -825,11 +830,12 @@ export const articlesFR = [
         content: null,
     },
 ];
+export const sourceNameBR = "fake source name BR";
 export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Onet",
         title: "Przełom w sprawie wycieczek młodzieży z Izraela. Jest umowa - Onet",
@@ -845,7 +851,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Transfery.info",
         title: "Reprezentacja Polski: Prawdopodobny skład na mecz z Czechami - Transfery.info",
@@ -861,7 +867,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Pudelek",
         title: 'Tak Joanna Opozda wyglądała jeszcze kilka lat temu w JASNYM BLONDZIE: "Właśnie dlatego już nie rozjaśniam włosów" (FOTO) - Pudelek',
@@ -875,7 +881,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Money.pl",
         title: "Podatek od trzynastej emerytury. Cześć seniorów odzyska pieniądze. Oto sposób - Money.pl",
@@ -889,7 +895,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "TVP Info",
         title: "Zandberg odpowiada Tuskowi: Neoliberalizm skończył się przejęciem władzy przez PiS - TVP Info",
@@ -903,7 +909,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "PAP",
         title: "MSZ: wizyta księcia Williama w Polsce poświęcona jest przede wszystkim wsparciu dla Ukrainy i Polski - PAP",
@@ -917,7 +923,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Money.pl",
         title: "Branża drzewna w tarapatach. Przemysł traci swoją konkurencyjność - Money.pl",
@@ -931,7 +937,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Onet",
         title: "Córka Cruise'a idzie do college'u. Aktor od 10 lat nie odzywa się do Suri - Onet",
@@ -945,7 +951,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "WP Wiadomości",
         title: "Wierny pies Putina. Miedwiediew znów próbuje siać zamęt - WP Wiadomości",
@@ -959,7 +965,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "TVP Info",
         title: "Niemiecki koncern na liście „międzynarodowych sponsorów wojny” - TVP Info",
@@ -973,7 +979,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Wp.pl",
         title: 'Jarek przeszedł metamorfozę? "Ja mam kondycję" - Wp.pl',
@@ -987,7 +993,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "TVP Info",
         title: "Republikański kontrkandydat Trumpa: Putin to zbrodniarz, trzeba go rozliczyć - TVP Info",
@@ -1001,7 +1007,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Sportowefakty",
         title: 'Wskazała powód słabszej dyspozycji Igi Świątek. "Myślę, że to nasza wina" - Sportowefakty',
@@ -1015,7 +1021,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "TVP Info",
         title: "Ponad 25 tys. zł kary dla szpitala, w którym pracuje Mama Ginekolog - TVP Info",
@@ -1029,7 +1035,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Do Rzeczy",
         title: "Ukraina. Ostrzał Zaporoża. Uszkodzonych ponad 300 mieszkań - Do Rzeczy",
@@ -1043,7 +1049,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "BusinessInsider",
         title: "Ile zarabiają policjanci? Za mało. Zwłaszcza w dużych miastach odchodzą na potęgę - BusinessInsider",
@@ -1057,7 +1063,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "BusinessInsider",
         title: "Fed widzi, że banki padają. W efekcie podniesie stopy procentowe jeszcze tylko raz - BusinessInsider",
@@ -1071,7 +1077,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Gazeta Wyborcza",
         title: "Wielka afera ze sprzętem przeciw COVID-19. Kto w obozie władzy za nią odpowie? - Gazeta Wyborcza",
@@ -1085,7 +1091,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "Interia Biznes",
         title: "Google przedstawił Barda. Na razie tylko w USA i Wielkiej Brytanii - Interia Biznes",
@@ -1099,7 +1105,7 @@ export const articlesBR = [
     {
         source: {
             id: "google-news",
-            name: "fake source name BR",
+            name: sourceNameBR,
         },
         author: "TVN24",
         title: "Atak Rosji na Ukrainę. Relacja na żywo 23 marca 2023 - TVN24",

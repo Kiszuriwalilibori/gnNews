@@ -26,7 +26,7 @@ export default function ListItem(props: Props) {
                 <b>{t("listitem.publish")}</b>
                 {useDataFormat(publishedAt)}
             </h4>
-            <h4 className="listItem__source">
+            <h4 className="source listItem__source">
                 <b>{t("listitem.source")}</b>
                 {source.name}
             </h4>

@@ -1,7 +1,8 @@
 {
-    "name": "newsapi",
+    "name": "gnnews",
     "version": "0.1.0",
     "private": true,
+    "homepage": "http://kiszuriwalilibori.github.io/gnNews",
     "dependencies": {
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
@@ -15,6 +16,7 @@
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.11",
         "axios": "^0.19.0",
+        "gh-pages": "^5.0.0",
         "i18next": "^22.4.13",
         "lodash": "^4.17.21",
         "moment": "^2.29.4",
@@ -36,7 +38,9 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [

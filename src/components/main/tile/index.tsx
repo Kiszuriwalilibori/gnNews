@@ -29,7 +29,7 @@ export default function Tile(props: Props) {
                 <b>{t("listitem.publish")}</b>
                 {useDataFormat(publishedAt)}
             </h4>
-            <h4 className="tile__source">
+            <h4 className="source tile__source">
                 <b>{t("listitem.source")}</b>
                 {source.name}
             </h4>
