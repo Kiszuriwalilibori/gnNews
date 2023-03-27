@@ -1,0 +1,16 @@
+.not-found {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    &__message {
+        color: red;
+        font-size: 2rem;
+    }
+}

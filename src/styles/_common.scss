@@ -1,0 +1,57 @@
+@use "./abstracts/variables";
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Lato", sans-serif;
+    color: #252732;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+input,
+select,
+textarea {
+    color: var(--main-text-color);
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+b {
+    font-weight: 600;
+}
+
+hr {
+    margin: 0;
+    border-width: 0;
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-bottom-width: thin;
+}
+
+.flex---equal-item {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    margin-top: var(--header-height);
+    display: flex;
+    @include mobile {
+        flex-direction: column;
+    }
+}

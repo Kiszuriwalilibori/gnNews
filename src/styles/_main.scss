@@ -1,0 +1,99 @@
+.main {
+    overflow-y: auto;
+    margin-bottom: var(--footer-height);
+    background-color: var(--with-list-bg-color);
+    color: #1e1f24;
+    &--withTiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: var(--with-tile-bg-color);
+        padding: 10px;
+
+        & .tile {
+            width: 240px;
+            border-radius: 10px;
+            @include boxshadow1;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.12);
+            margin: 10px;
+            float: left;
+            background-color: var(--tile-bg-color);
+            color: white;
+            padding-bottom: 10px;
+            transition: transform 0.7s ease-in-out;
+            &:hover {
+                transform: translateY(5px);
+            }
+            & :not(:first-child) {
+                padding: 10px 15px;
+                border-width: 0;
+                border-bottom-width: 0px;
+                border-style: solid;
+                border-color: rgba(0, 0, 0, 0.12);
+                border-bottom-width: thin;
+            }
+            &__image-container {
+                width: 240px;
+                height: 150px;
+                border-radius: 10px 10px 0 0;
+            }
+            &__image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+            }
+            &__title {
+                line-height: 1.7;
+                font-weight: bold;
+                max-height: 70px;
+                width: 100%;
+                overflow: hidden;
+                word-wrap: break-word;
+
+                @include resizesOnHover;
+            }
+            &__published {
+                font-size: 16px;
+                line-height: 1.2;
+            }
+            &__source {
+                font-size: 1rem;
+                line-height: 2;
+            }
+            &__description {
+                font-size: 16px;
+                line-height: 1.2;
+                max-height: 100px;
+                overflow: hidden;
+                @include resizesOnHover;
+            }
+        }
+    }
+    .listItem {
+        width: 100%;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.12);
+        border-bottom-width: thin;
+        padding: 20px;
+        transition: background-color 0.7s;
+        cursor: pointer;
+        &:hover {
+            background-color: #e3c021;
+        }
+        &__title {
+            font-size: 2 rem;
+            line-height: 2;
+            font-weight: bold;
+        }
+        &__published {
+            font-size: 1.6 rem;
+            line-height: 2;
+        }
+        &__source {
+            font-size: 1 rem;
+            line-height: 2;
+        }
+    }
+}

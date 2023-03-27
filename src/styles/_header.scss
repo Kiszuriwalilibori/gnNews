@@ -1,0 +1,46 @@
+.header {
+    @include boxshadow1;
+    @include limitedWidth;
+    @extend .flexRow;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--header-bg-color);
+    color: var(--text-light-color);
+    border-radius: 0 0 2px 2px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    height: var(--header-height);
+    top: 0;
+
+    &__element-container {
+        @extend .flex---equal-item;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .option {
+        font-weight: bolder;
+        text-transform: capitalize;
+    }
+
+    &__title {
+        font-size: larger;
+        // text-transform: uppercase;
+        font-weight: bold;
+        color: var(--text-light-color);
+    }
+    &__central {
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & .language-switch-container {
+        align-items: center;
+        display: flex;
+    }
+}

@@ -1,0 +1,43 @@
+.sidebar {
+    width: 200px;
+    padding: 15px;
+    background-color: var(--sidebar-bg-color);
+    color: var(--text-light-color);
+    min-height: 100%;
+    @include mobile {
+        width: 100%;
+        min-height: unset;
+        display: flex;
+        justify-content: center;
+        min-height: var(--header-height);
+    }
+
+    border-radius: 0 0 2px 2px;
+    & .option {
+        font-weight: bolder;
+        text-transform: capitalize;
+    }
+    & .h1 {
+        font-size: larger;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    & label {
+        color: var(--text-light-color) !important;
+        font-weight: bolder;
+    }
+
+    & .country-container {
+        display: flex;
+        align-items: center;
+        & .country-image {
+            margin-right: 6px;
+        }
+        & .country-link {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+}

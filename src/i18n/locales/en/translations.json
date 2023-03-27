@@ -1,0 +1,11 @@
+{
+    "header": {
+        "title": "gnNews",
+        "language-switch": { "leftLabel": "english", "rightLabel": "polish" },
+        "layout-switch": { "leftLabel": "list", "rightLabel": "tile" }
+    },
+    "sidebar": { "title": "Country" },
+    "footer": { "nonews": "No news to be displayed", "newsnumber": "Number of news: " },
+    "listitem": { "publish": "Published: ", "source": "Source: ", "description": "Description: " },
+    "modal": { "prompt": "Read full article" }
+}
