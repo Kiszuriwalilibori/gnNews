@@ -17,7 +17,7 @@ export function Footer(props: Props) {
         <footer className="footer">
             <div className="footer__element-container">
                 <div>{newsNumberComment}</div>
-                {newsNumber && <span id="newsNumber">{newsNumber}</span>}
+                {newsNumber !== 0 && <span id="newsNumber">{newsNumber}</span>}
             </div>
             <div className="footer__element-container">
                 <Clock />

@@ -1,6 +1,8 @@
-export default function toDataLocale(str: string, country: string) {
+import { PermittedLanguages } from "../types";
+
+export default function toDataLocale(str: string, country: PermittedLanguages) {
     const dat = new Date(str);
-    var options = {
+    var options: Intl.DateTimeFormatOptions = {
         weekday: "long",
         year: "numeric",
         month: "long",
@@ -10,12 +12,12 @@ export default function toDataLocale(str: string, country: string) {
 
     switch (country) {
         case "pl":
-            return dat.toLocaleDateString("pl-PL", options as any) + " " + dat.toLocaleTimeString("pl-PL");
+            return dat.toLocaleDateString("pl-PL", options) + " " + dat.toLocaleTimeString("pl-PL");
 
         case "en":
-            return dat.toLocaleDateString("en-US", options as any) + " " + dat.toLocaleTimeString("en-US");
+            return dat.toLocaleDateString("en-US", options) + " " + dat.toLocaleTimeString("en-US");
 
         default:
-            return dat.toLocaleDateString("en-US", options as any) + " " + dat.toLocaleTimeString("en-US");
+            return dat.toLocaleDateString("en-US", options) + " " + dat.toLocaleTimeString("en-US");
     }
 }

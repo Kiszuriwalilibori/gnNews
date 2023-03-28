@@ -5,10 +5,12 @@
     color: #1e1f24;
     &--empty {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
+        &__item {
+            text-align: center;
+            display: block;
+            margin-top: 10vh;
+            font-size: 2rem;
+        }
     }
     &--withTiles {
         display: flex;

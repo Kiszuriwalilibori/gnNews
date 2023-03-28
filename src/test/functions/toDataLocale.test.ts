@@ -1,5 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import toDataLocale from "../../functions/toDataLocale";
+import { PermittedLanguages } from "../../types";
 
 describe("given toDataLocale function", () => {
     describe("when called with valid arguments", () => {
@@ -21,9 +22,9 @@ describe("given toDataLocale function", () => {
     });
     describe("when called with invalid country code, but valid string it returns correct english date", () => {
         it("displays correct results with respect both to value and language", () => {
-            const xx1 = toDataLocale("2023-03-23T07:40:00Z", "xx");
-            const xx2 = toDataLocale("2023-03-23T07:34:51Z", "xx");
-            const xx3 = toDataLocale("2023-03-23T07:23:00Z", "xx");
+            const xx1 = toDataLocale("2023-03-23T07:40:00Z", "xx" as PermittedLanguages);
+            const xx2 = toDataLocale("2023-03-23T07:34:51Z", "xx" as PermittedLanguages);
+            const xx3 = toDataLocale("2023-03-23T07:23:00Z", "xx" as PermittedLanguages);
 
             expect(xx1).toBe("Thursday, March 23, 2023 8:40:00 AM");
             expect(xx2).toBe("Thursday, March 23, 2023 8:34:51 AM");
@@ -32,9 +33,9 @@ describe("given toDataLocale function", () => {
     });
     describe("when called with invalid date it will return warning", () => {
         it("displays correct results with respect both to value and language", () => {
-            const xx1 = toDataLocale("misio", "xx");
-            const xx2 = toDataLocale("124345454", "xx");
-            const xx3 = toDataLocale("se546t43vg54j90w5 ddgf", "xx");
+            const xx1 = toDataLocale("misio", "xx" as PermittedLanguages);
+            const xx2 = toDataLocale("124345454", "xx" as PermittedLanguages);
+            const xx3 = toDataLocale("se546t43vg54j90w5 ddgf", "xx" as PermittedLanguages);
 
             expect(xx1).toBe("Invalid Date Invalid Date");
             expect(xx2).toBe("Invalid Date Invalid Date");

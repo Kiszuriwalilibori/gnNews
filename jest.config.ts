@@ -24,7 +24,7 @@
 import type { Config } from "@jest/types";
 
 const config: Config.InitialOptions = {
-    roots: ["<rootDir>/src"],
+    roots: ["<rootDir>/src", "<rootDir>", "<rootDir>/test"],
     transform: {
         "^.+\\.tsx?$": "ts-jest",
         "^.+\\.css$": "<rootDir>/jest-config/style-mock.js",
