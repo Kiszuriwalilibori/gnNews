@@ -4,7 +4,7 @@
         "language-switch": { "leftLabel": "angielski", "rightLabel": "polski" },
         "layout-switch": { "leftLabel": "lista", "rightLabel": "kafle" }
     },
-    "sidebar": { "title": "Państwo" },
+    "sidebar": { "title": "Państwo", "reset": "Wyczyść" },
     "footer": { "nonews": "Brak wiadomości do wyświetlenia", "newsnumber": "Liczba wiadomości: " },
     "listitem": { "publish": "Opublikowano: ", "source": "Żródło: ", "description": "Zajawka: " },
     "modal": { "prompt": "Przeczytaj całość" }

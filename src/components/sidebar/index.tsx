@@ -4,6 +4,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import ResetButton from "./resetButton";
 
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
@@ -82,6 +83,7 @@ export function Sidebar(props: Props) {
                 )}
                 <div></div>
             </FormControl>
+            <ResetButton />
         </aside>
     );
 }

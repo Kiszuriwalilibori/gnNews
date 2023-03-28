@@ -40,6 +40,10 @@ const createCountryNewsNumber = (news: DataWithCountry[]) => {
     return number;
 };
 
+const createIsCountrySelected = (country: string) => {
+    return country === "" ? false : true;
+};
+
 const createCountryPaths = (codes: string[]) => {
     if (!codes || isEmpty(codes)) {
         return [];
@@ -57,3 +61,5 @@ export const getCountryNews = createSelector(getNewsData, getSelectedCountry, cr
 export const getCountryNewsNumber = createSelector(getCountryNews, createCountryNewsNumber);
 
 export const getCountryPaths = createSelector(getCountriesList, createCountryPaths);
+
+export const getIsCountrySelected = createSelector(getSelectedCountry, createIsCountrySelected);

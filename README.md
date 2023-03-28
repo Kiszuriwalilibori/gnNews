@@ -18,9 +18,11 @@ Lista wyboru państwa w sidebarze generuje się dynamicznie, trafią tam państw
 
 Wybór państwa powoduje przeniesienie do podstrony państwa gdzie dostępne są tylko artykuły dla danego państwa.
 
-Przeniesienie się poprzez wpisanie adresu w pasku przeglądarki z powrotem do strony głównej powoduje wyczyszczenie kryterium państwa i wyzerowanie przełaczników.
+Przeniesienie się poprzez wpisanie adresu w pasku przeglądarki z powrotem do strony głównej powoduje wyczyszczenie kryterium państwa i wyzerowanie przełączników.
 
-Dla adresów innych niz główna, /countries/ i strony krajów wyświetla się strona błędu.
+Do dyspozycji uzytkownika jest także guzik "Reset" realizujący tą sama ąkcję
+
+Dla adresów innych niż główna, /countries/ i strony krajów wyświetla się strona błędu.
 
 Komponenty <Route> dla krajów są generowane dynamicznie z listy krajów ze store ale nie przez :id tylko przez zmapowanie listy krajów w store na <Route>. Jest tak dlatego, aby po wpisaniu z palca w pasku adresu adresu dla którago apka nie przedwiduje treści, np .../countries/test nie być przekierowanym na podstronę test (bo co niby tam by miało być), tylko na stronę błędu.
 
@@ -30,11 +32,11 @@ Aplikacja umozliwia zmianę języka interfejsu polski <> angielski.
 
 ### Kopia plików
 
-    Zawartość repozytorium należy skopować w dowolny sposób, umieścić w decelowym  katalogu a następnie wykonać komendę npm install.Nie sprawdzałem i nie gwarantuję, że zadziała z yarn.
+Zawartość repozytorium należy skopować w dowolny sposób, umieścić w decelowym katalogu a następnie wykonać komendę npm install.Nie sprawdzałem i nie gwarantuję, że zadziała z yarn.
 
 ### Klucz
 
-    Aplikacja wymaga klucza dostępu do [https://newsapi.org/s/poland-news-api]. Po uzyskaniu  klucz należy zapisać go w pliku .env w glównym katalogu projektu jako wartość zmiennej REACT_APP_API_KEY
+Aplikacja wymaga klucza dostępu do [https://newsapi.org/s/poland-news-api]. Po uzyskaniu klucz należy zapisać go w pliku .env w glównym katalogu projektu jako wartość zmiennej REACT_APP_API_KEY
 
 ## Istotne dla kustomizacji lokalnej kopi
 

@@ -4,7 +4,7 @@
         "language-switch": { "leftLabel": "english", "rightLabel": "polish" },
         "layout-switch": { "leftLabel": "list", "rightLabel": "tile" }
     },
-    "sidebar": { "title": "Country" },
+    "sidebar": { "title": "Country", "reset": "Reset" },
     "footer": { "nonews": "No news to be displayed", "newsnumber": "Number of news: " },
     "listitem": { "publish": "Published: ", "source": "Source: ", "description": "Description: " },
     "modal": { "prompt": "Read full article" }
