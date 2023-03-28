@@ -1,6 +1,6 @@
 # gnNews
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://www.clipartmax.com/png/middle/379-3794436_react-icon-react-icon.png)](https://nodesource.com/products/nsolid)
 
 ## Istotne dla uruchomiania lokalnego
 
