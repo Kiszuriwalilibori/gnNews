@@ -1,4 +1,4 @@
-import SwitchComponent from "../../../components/shared-components/switch";
+import SwitchComponent from "../../../../components/shared-components/switch";
 
 import { cleanup } from "@testing-library/react";
 

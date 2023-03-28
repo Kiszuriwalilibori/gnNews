@@ -1,67 +1,86 @@
 # gnNews
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+## Cele projektu
 
-## Istotne dla uruchomiania lokalnego
+-   Wykazać znajomość Reacta, Reduxa, TS, Redux toolkit, react-test-lib
+-   Posłuzyć jako okazja do przećwiczenia tychże technologii w praktyce
+-   Przybliżyć autora do podjęcia pracy w gn Studio
+
+## Funkcjonalności
+
+Apka początkowo pobiera ze źródła artykuły pochodzące z kilku krajów i wyświetla je wszystkie na podstawie początkowej listy krajów.
+
+Do prawidłowego działania wymaga obecności klucza dostępu do [https://newsapi.org/s/poland-news-api]. Bez klucza wyświetli tylko ostrzeżenie.
+
+Użytkownik ma możliwość wyboru artykułów pochodzących z określonego państwa za pomocą przełączników w panelu bocznym.
+
+Lista wyboru państwa w sidebarze generuje się dynamicznie, trafią tam państwa z początkowej listy jak powyżej, ale tylko jeżeli pobrane zostały dla nich artykuły( nie można wykluczyć, że lista artykułów w źródle jest pusta).
+
+Wybór państwa powoduje przeniesienie do podstrony państwa gdzie dostępne są tylko artykuły dla danego państwa.
+
+Przeniesienie się poprzez wpisanie adresu w pasku przeglądarki z powrotem do strony głównej powoduje wyczyszczenie kryterium państwa i wyzerowanie przełaczników.
+
+Dla adresów innych niz główna, /countries/ i strony krajów wyświetla się strona błędu.
+
+Komponenty <Route> dla krajów są generowane dynamicznie z listy krajów ze store ale nie przez :id tylko przez zmapowanie listy krajów w store na <Route>. Jest tak dlatego, aby po wpisaniu z palca w pasku adresu adresu dla którago apka nie przedwiduje treści, np .../countries/test nie być przekierowanym na podstronę test (bo co niby tam by miało być), tylko na stronę błędu.
+
+Aplikacja umozliwia zmianę języka interfejsu polski <> angielski.
+
+## Istotne dla sporządzenia i uruchomienia lokalnej kopii
+
+### Kopia plików
+
+    Zawartość repozytorium należy skopować w dowolny sposób, umieścić w decelowym  katalogu a następnie wykonać komendę npm install.Nie sprawdzałem i nie gwarantuję, że zadziała z yarn.
 
 ### Klucz
 
-Aplikacja wymaga klucza dostępu do [https://newsapi.org/s/poland-news-api]. W przypadku zainteresowania skopiowaniem i uruchomieniem lokalnie, należy uzyskać taki klucz, a następnie zqapisać go w pliku .env w glównym katalogu projektu jako waetość zmiennej REACT_APP_API_KEY
+    Aplikacja wymaga klucza dostępu do [https://newsapi.org/s/poland-news-api]. Po uzyskaniu  klucz należy zapisać go w pliku .env w glównym katalogu projektu jako wartość zmiennej REACT_APP_API_KEY
 
-### Pozostałe
-
-Wszystko, co należy zrobić to skopiować w dowolny sposób zawartość repo, odpalić npm install i zrobić to, co napisałem o kluczu powyżej. Nie sprawdzałem z yarn.
-
-## Istotne dla zrozumienia i ew. rozwijania apki
-
-### Klucz jeszcze raz
-
-Jak napisałem powyżej aplikacja wymaga klucza, co więcej obecność klucza w podanej lokalizacji jest sprawdzana na samym początku wykonywania kodu (apka się be zklucza nie wywali, ale nic nie pokazuje)
+## Istotne dla kustomizacji lokalnej kopi
 
 ### Lista krajów
 
 W pliku fixtures.ts jest eksport o nazwie countryCodes, który decyduje z ilu i jakich krajów newsy będą pobierane. W razie zainteresowania, więcej kodów można pobrać ze strony
 [https://newsapi.org/docs/endpoints/sources]
 z pozycji country.
-Lista wyboru państawa w sidebarze generuje się dynamicznie, trafią tam kraje z listy jak powyżej jeżeli mają articles; jezęli nie - to nie.
 
-### Ścieżki 1
+### Rozbudowa o dodatkowe języki
 
-Ścieżki zrealizowane zgodnie z wytycznymi zadania plus dwie uwagi: na ścieżce /countries/ czyli bez wyboru kraju dostaniemy wszystkie newsy z wszystkich krajów, skąd były pobierane (patrze poprzedni punkt.) Po wybraniu kraju w sidebarze, zgodnie z wytcznymi, dostępne są tylko newsy z kraju, ale jeżeli powrócić z palca na stronę /countries/, wybór kraju i filtrowanie będą wyczyszczone.
+Poza uzupełnieniem zawartości /i18n/locales/ należy conajmniej zmienić zawartość typPermittedLanguages (aktualna wartość "en" | "pl").
+Dla pełnego efektu także funkcję toDataLocale
 
-### Ścieżki 2
+## Uwagi i komentarze ogólne
 
-Routes dla krajów są generowane dynamicznie z listy krajów,, ale nie przez :id tylko dosłownie, przez zmapowanie listy krajów na komponenty <Route>. Jest tak dlatego, aby po wpisaniu z palca w pasku adresu nieistniejącego albo niepobieranego adresu, np .../countries/xx nie być przekiorowanym na stronę xx (bo co niby tam by miało być), tylko na stronę błędu. Być może są innne rozwiązania, ale dla prostoty i wygody zrobiłem jak zrobiłem.
+### Slices i selektory
 
-### Ogólnie 1
+Ponieważ napisaliście, że redux- toolkit jest dla Was istotny, zrobiłem w tej apce reduxa na slice'ach co czasami moze wyglądać trochę nienaturalnie. Tak samo z użyciem selektorów.
 
-Nie chcieliście abym poświęcił na to ponad 12 godzin, toteż niektóre fragmenty są żywcem skopiowane z innych projektów. Generalnie starałem się wyczyścić apkę ze śladów innych projektów ale patrz poprzednie zdanie, nie było to priorytetem.
+### Czas i kopiowanie
 
-### Stylizacja
+Nie chcieliście abym poświęcił na to ponad 12 godzin, toteż niektóre fragmenty są żywcem skopiowane z innych projektów. Oczywiście starałem się wyczyścić apkę z takich pozostałości, ale nie było to priorytetem. Z tej też przyczyny np modale są praktycznie żywcem przeniesione z MUI.
 
-Macie tutaj CSS/SASS i MUI.Nie żebym unikał Styled Components (są stosowane w innych projektach), ale jak trzeba na szybko, to nie ma jak SCSS. Modyfikacje komponentów MUI nie są przemieszane z SCSS (tzn nie modyfikuję w plikach .scss klas z MUI).
-Może zaskakiwać użycie dużych liter do nazw niektórych klas. Taki nawyk z dużego projektu - pierwsza klasa z dużej litery, wszystko co od niej zależnie już nie.
+### Czas i style
 
-### Sidebar
+Zastosowałe CSS/SASS i MUI.Nie żebym unikał Styled Components (są stosowane w innych projektach), ale jak trzeba na szybko, to nie ma jak SCSS. Modyfikacje komponentów MUI nie są przemieszane z SCSS (tzn nie modyfikuję w plikach .scss klas z MUI).
 
-Sidebar w mobilu ląduje pod headerem, spradziłem inne opcje ale chowanie/ wysuwanie jest trochę klopotliwe (i po rozwinięciu nie wygląda najlepiej), zostawić nie można nawet z pomniejszonym fontem bo wygląda fatalnie, a tak wygląda całkiem nieźle.
+### Położenie sidebara
 
-### Ogólne 2
+Sidebar w widoku mobile ląduje pod headerem, spradziłem inne opcje ale chowanie/ wysuwanie jest trochę klopotliwe (i po rozwinięciu nie wygląda najlepiej), zostawić nie można nawet z pomniejszonym fontem bo wygląda fatalnie, a tak wygląda całkiem nieźle.
+
+### Czas
 
 API w wolnym planie ma ograniczoną drastycznie liczbę pobrań co wydłużyło robotę o jeden dzień. Dlatego, ale też i trochę dla testów, stany początkowe mogą być zaskakujące (acz nie wpływa to na pracę apki w zuważalny sposób). Krótko mowić musiałem stworzyć fejkowe dane i odpalać na tych fejkowych danych, a z prawdziwym endpointem łączyłem się od wielkiego dzwonu.
 
 ### Dane
 
-Ogolnie dane są strasznie dziurawe. Radko kiedy jest ilustracja, z kontentem podobnie. Kafle w tej sytuacji nie wyglądają tak, jakby mogły.
+Ogolnie dane są strasznie dziurawe. Radko kiedy jest ilustracja, z treścią podobnie. Kafle w tej sytuacji nie wyglądają najlepiej. Poza tym API w dokumentacji tylko dla contentu podaje maksymalną ilość znaków, aprzydatna byłaby ona takze dla title i description. Nie bardzo wiadomo co ile miejsca może potrzebować
 
-sprawdzić wszędzie czy nie da się jakoś połaczyć eksportów
+## Testy
 
-UWAGA: wprawdzie tozałatałem ale sprawa wymaga bliższego zbadania. Do helpera w selektorach
+Nie napisaliście czy jednostkowe, czy end-to end, więc jest mieszanka. W testach pojawiają się także zasadniczo nieprawdopodbne scenariusze (wybrano państwo spoza listy państw do wyboru),
 
-const createCountryNewsNumber = (news: []) => {
-if (!news) return 0;
-const number = news.length;
-return number;
-};
+## TODO
 
-trafia news undefined w sytuacji, kiedy newsy nie zawierają newsów z kraju aktywnego. Zasadniczo to nie ma prawa sie zdarzyć ale w testach to wyszło bo trzeba bylo zasymulowac pusty wynik.
+sprawdzić wszędzie czy nie da się jakoś połączyć eksportów
+
+obejrzeć jak wygląda bez internetu

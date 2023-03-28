@@ -39,10 +39,10 @@ export default function Popup() {
                         Wyzwania i osiągi
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        No cóż, nie da się ukryć, że te zadanie to mój pierwszy kontakt z biblioteką do
-                        internacjonalizji i18next.Największym wyzwaniem było jej ogarnięcie w krotkim czasie.
-                        Jednocześnie dało to najwięcej zadowolenia. Należy też wspomnieć że podsunięte źródło newsów ma
-                        ograniczenia darmowego dostepu, co spowodowało wydłużenie pracy o 1 dzień.
+                        To mój pierwszy kontakt z biblioteką do internacjonalizji i18next. Wiedziałem, że jest
+                        potrzebna, ale tak jakoś schodziła na bok w planach rozwojowych. Największym wyzwaniem było jej
+                        ogarnięcie w krótkim czasie w choćby minimalnym stopniu. Poza tym, od dawna nie pisałem testów,
+                        dobrze było je sobie przypomnieć.
                     </Typography>
                 </Box>
             </Modal>

@@ -5,7 +5,7 @@ import { cleanup } from "@testing-library/react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { HashRouter as Router } from "react-router-dom";
 import { fakeState, mainClassNames, sourceNameBR, sourceNameFR, sourceNamePL, articlesBR } from "../../../fixtures";
 
@@ -37,7 +37,6 @@ describe("Given Main component", () => {
             );
             // eslint-disable-next-line testing-library/no-debugging-utils
 
-            // const list = document.querySelector(".main--withList");
             const list = document.querySelector("." + mainClassNames.list);
             expect(list).toBeInTheDocument();
             const listItems = document.getElementsByClassName("listItem");
