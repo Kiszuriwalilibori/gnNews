@@ -22,8 +22,9 @@
             color: white;
             padding-bottom: 10px;
             transition: transform 0.7s ease-in-out;
+            max-height: 540px;
             &:hover {
-                transform: translateY(2px);
+                max-height: unset;
             }
             & :not(:first-child) {
                 padding: 10px 15px;
@@ -49,10 +50,10 @@
                 font-weight: bold;
                 max-height: 110px;
                 width: 100%;
-                overflow: auto;
+                // overflow: auto;
                 word-wrap: break-word;
 
-                // @include resizesOnHover;
+                @include resizesOnHover;
             }
             &__published {
                 font-size: 16px;
@@ -66,8 +67,8 @@
                 font-size: 16px;
                 line-height: 1.2;
                 max-height: 160px;
-                overflow: auto;
-                // @include resizesOnHover;
+                // overflow: auto;
+                @include resizesOnHover;
             }
         }
     }

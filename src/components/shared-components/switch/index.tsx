@@ -7,6 +7,7 @@ type Props = {
     labelRight?: string | null;
     labelText?: string;
     isChecked?: boolean;
+    optionClassName?: string;
 };
 
 /**
@@ -17,15 +18,15 @@ type Props = {
  * @returns basic switch component
  */
 const SwitchComponent = (props: Props): JSX.Element => {
-    const { onChangeHandler, labelLeft, labelRight, labelText, isChecked } = props;
+    const { onChangeHandler, labelLeft, labelRight, labelText, isChecked, optionClassName = "option" } = props;
 
     return (
         <FormControlLabel
             control={
                 <div className="switch">
-                    <span className="option">{labelLeft}</span>
+                    <span className={optionClassName}>{labelLeft}</span>
                     <Switch checked={isChecked} onChange={onChangeHandler} name="checked" color="warning" />
-                    <span className="option">{labelRight}</span>
+                    <span className={optionClassName}>{labelRight}</span>
                 </div>
             }
             label={labelText}

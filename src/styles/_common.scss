@@ -53,5 +53,6 @@ hr {
     display: flex;
     @include mobile {
         flex-direction: column;
+        // margin-top: var(--header-height-mobile);
     }
 }

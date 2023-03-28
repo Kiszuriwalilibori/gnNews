@@ -10,10 +10,10 @@ export default function Header() {
 
     return (
         <header className="header">
-            <div className="header__element-container">
+            <div className="header__element-container header__element-container--left">
                 <LayoutSwitch />
             </div>
-            <div className="header__element-container">
+            <div className="header__element-container header__element-container--flowing ">
                 <div className="header__central">
                     <Link to="/" style={{ textDecoration: "none" }}>
                         <h1 className="header__title">{t("header.title")}</h1>
@@ -22,7 +22,7 @@ export default function Header() {
                     <Popup />
                 </div>
             </div>
-            <div className="header__element-container">
+            <div className="header__element-container header__element-container--right">
                 <LanguageSwitch />
             </div>
         </header>

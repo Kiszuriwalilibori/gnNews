@@ -13,7 +13,8 @@
         min-height: unset;
         display: flex;
         justify-content: center;
-        min-height: var(--header-height);
+        padding: 15px 0;
+        // min-height: var(--header-height);
     }
 
     border-radius: 0 0 2px 2px;

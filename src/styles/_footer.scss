@@ -4,7 +4,7 @@
     @extend .flexRow;
     justify-content: space-evenly;
     align-items: center;
-    padding: 30px;
+    padding: 10px;
     background-color: var(--header-bg-color);
     color: var(--text-light-color);
     border-radius: 2px 2px 0 0;
@@ -12,6 +12,9 @@
     height: var(--footer-height);
     position: fixed;
     bottom: 0;
+    @include mobile {
+        flex-direction: column;
+    }
 
     &__element-container {
         @extend .flex---equal-item;

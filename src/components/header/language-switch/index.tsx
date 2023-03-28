@@ -23,13 +23,14 @@ export default function LanguageSwitch() {
 
     return (
         <div className="language-switch-container">
-            <img className="country-image" alt="text" src="https://flagcdn.com/28x21/gb.png" />
+            <img className="country-image switch-image" alt="text" src="https://flagcdn.com/28x21/gb.png" />
             <Switch
                 labelLeft={t("header.language-switch.leftLabel")}
                 labelRight={t("header.language-switch.rightLabel") as string}
                 onChangeHandler={changeLanguage}
+                optionClassName="option option--desktop-visible"
             />
-            <img className="country-image" alt="text" src="https://flagcdn.com/28x21/pl.png" />
+            <img className="country-image switch-image" alt="text" src="https://flagcdn.com/28x21/pl.png" />
         </div>
     );
 }

@@ -62,6 +62,7 @@ export function Sidebar(props: Props) {
                         sx={{
                             "@media (max-width: 768px)": {
                                 flexDirection: "row",
+                                justifyContent: "center",
                             },
                         }}
                     >
