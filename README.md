@@ -12,6 +12,8 @@ Apka początkowo pobiera ze źródła artykuły pochodzące z kilku krajów i wy
 
 Do prawidłowego działania wymaga obecności klucza dostępu do [https://newsapi.org/s/poland-news-api]. Bez klucza wyświetli tylko ostrzeżenie.
 
+Do prawidłowego działania potrzebny jest także internet ;) Wprawdzie apka wyświtliłaby się z pustymi danymi ale brakowałoby flag i ogolnie nie wyglądałoby to dobrze. Zatem przy braku intenetu jest tylko pusty ekran z komantarzem
+
 Użytkownik ma możliwość wyboru artykułów pochodzących z określonego państwa za pomocą przełączników w panelu bocznym.
 
 Lista wyboru państwa w sidebarze generuje się dynamicznie, trafią tam państwa z początkowej listy jak powyżej, ale tylko jeżeli pobrane zostały dla nich artykuły( nie można wykluczyć, że lista artykułów w źródle jest pusta).
@@ -55,7 +57,7 @@ Dla pełnego efektu także funkcję toDataLocale
 
 ### Slices i selektory
 
-Ponieważ napisaliście, że redux- toolkit jest dla Was istotny, zrobiłem w tej apce reduxa na slice'ach co czasami moze wyglądać trochę nienaturalnie. Tak samo z użyciem selektorów.
+Ponieważ napisaliście, że redux- toolkit jest dla Was istotny, zrobiłem w tej apce reduxa na slice'ach co czasami może wyglądać trochę nienaturalnie. Tak samo z powszechnym użyciem selektorów.
 
 ### Czas i kopiowanie
 
@@ -84,5 +86,3 @@ Nie napisaliście czy jednostkowe, czy end-to end, więc jest mieszanka. W testa
 ## TODO
 
 sprawdzić wszędzie czy nie da się jakoś połączyć eksportów
-
-obejrzeć jak wygląda bez internetu

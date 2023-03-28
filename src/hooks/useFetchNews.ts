@@ -8,7 +8,7 @@ import { useDispatchAction } from "./useDispatchAction";
 import { Countries, DataWithCountry, Data } from "../types";
 
 const createEndpoint = (code: string) => {
-    return `https://newsapi.org/v2/top-headlines?country=${code}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    return `https://newsapi.org/v2/top-headlines?country=${code}&pageSize=100&apiKey=${process.env.REACT_APP_API_KEY}`;
 };
 
 const useFetchNews = () => {

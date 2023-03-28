@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 
 import useCheckApiKey from "./hooks/useCheckApiKey";
 import useFetchNews from "./hooks/useFetchNews";
+import useCheckOnline from "./hooks/useCheckOnline";
 
 import { Header, Footer, Main, Sidebar, NotFound } from "./components";
 import { getCountriesList } from "./reduxware/reducers/countriesSlice";
@@ -16,13 +17,15 @@ function App() {
     const isAPIKeyAvailable = useCheckApiKey();
     const { fetchNews } = useFetchNews();
     const countries = useSelector(getCountriesList, shallowEqual);
+    const isOnline = useCheckOnline();
 
     // useEffect(() => {
-    //     isAPIKeyAvailable && fetchNews(countryCodes);
+    //     isAPIKeyAvailable && isOnline && fetchNews(countryCodes);
     //     // eslint-disable-next-line react-hooks/exhaustive-deps
     // }, []);
 
     if (!isAPIKeyAvailable) return null;
+    if (!isOnline) return null;
 
     return (
         <div className="App">
