@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { isEmpty } from "lodash";
 
 import Popup from "./popup";
+import NoArticles from "./noarticles";
 import useMainLayout from "../../hooks/useMainLayout";
 import useClearCountries from "../../hooks/useClearCountries";
 
@@ -15,8 +16,8 @@ export default function Main() {
     const countryNews = useSelector(getCountryNews);
     const { mainClassName, MainItem } = useMainLayout();
 
-    if (!countryNews || isEmpty(countryNews)) return null;
-
+    if (!countryNews || isEmpty(countryNews)) return <NoArticles />;
+    // if (!countryNews || isEmpty(countryNews)) return null;
     return (
         <main className={mainClassName}>
             {countryNews.map((article: Article) => {

@@ -406,6 +406,13 @@ hr {
   background-color: var(--with-list-bg-color);
   color: #1e1f24;
 }
+.main--empty {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
 .main--withTiles {
   display: flex;
   flex-wrap: wrap;

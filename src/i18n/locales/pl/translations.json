@@ -7,5 +7,6 @@
     "sidebar": { "title": "Państwo", "reset": "Wyczyść" },
     "footer": { "nonews": "Brak wiadomości do wyświetlenia", "newsnumber": "Liczba wiadomości: " },
     "listitem": { "publish": "Opublikowano: ", "source": "Żródło: ", "description": "Zajawka: " },
-    "modal": { "prompt": "Przeczytaj całość" }
+    "modal": { "prompt": "Przeczytaj całość" },
+    "main": { "noarticles": "Nie znaleziono artykułów" }
 }

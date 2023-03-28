@@ -81,8 +81,10 @@ Ogolnie dane są strasznie dziurawe. Radko kiedy jest ilustracja, z treścią po
 
 ## Testy
 
-Nie napisaliście czy jednostkowe, czy end-to end, więc jest mieszanka. W testach pojawiają się także zasadniczo nieprawdopodbne scenariusze (wybrano państwo spoza listy państw do wyboru),
+Nie napisaliście czy jednostkowe, czy end-to end, więc jest taka sobie mieszanka. W testach pojawiają się także zasadniczo nieprawdopodbne scenariusze (wybrano państwo spoza listy państw do wyboru), ale tylko w celu prostszego sprawdzenia pustych danych.
 
 ## TODO
 
 sprawdzić wszędzie czy nie da się jakoś połączyć eksportów
+
+coś na pustą tablicę, jakieś nodata found komentarz

@@ -3,6 +3,13 @@
     margin-bottom: var(--footer-height);
     background-color: var(--with-list-bg-color);
     color: #1e1f24;
+    &--empty {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
     &--withTiles {
         display: flex;
         flex-wrap: wrap;
