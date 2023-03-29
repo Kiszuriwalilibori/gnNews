@@ -3,17 +3,10 @@ import { createSelector } from "@reduxjs/toolkit";
 import { getNewsData } from "../reducers/newsSlice";
 import { getSelectedCountry } from "../reducers/selectedCountrySlice";
 import { getCountriesList } from "../reducers/countriesSlice";
-import { countriesPath } from "../../fixtures";
 import { isEmpty } from "lodash";
 import { DataWithCountry } from "../../types";
 import { paths } from "../../paths";
 export { getModal } from "../reducers/modalSlice";
-
-/*utils*/
-function getCountryName(code: string) {
-    const capitalized = code.toUpperCase();
-    return (countryList as { [key: string]: string })[capitalized] || code;
-}
 
 /*creating functions */
 
@@ -28,6 +21,11 @@ export const createSortedCountriesList = (countries: string[]) => {
 };
 
 export const createSortedCountryCodesWithNames = (countries: string[]) => {
+    function getCountryName(code: string) {
+        const capitalized = code.toUpperCase();
+        return (countryList as { [key: string]: string })[capitalized] || code;
+    }
+
     if (!countries || isEmpty(countries)) {
         return [];
     } else {
@@ -86,7 +84,7 @@ const createCountryPaths = (codes: string[]) => {
         return [];
     } else {
         const result = codes.map(code => {
-            return countriesPath + code;
+            return paths.countries + code;
         });
         return result;
     }

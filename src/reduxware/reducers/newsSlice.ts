@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { fakeState } from "../../fixtures";
+import { fakeState } from "../../test/test-utils/fixtures";
 import { DataWithCountry } from "../../types";
+
 const initialState = { data: fakeState as DataWithCountry[] };
 
 // const initialState = { data: [] as DataWithCountry[] };

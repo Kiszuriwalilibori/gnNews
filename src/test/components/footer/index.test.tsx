@@ -5,7 +5,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 import { render, screen } from "@testing-library/react";
-import { fakeState } from "../../../fixtures";
+import { fakeState } from "../../test-utils/fixtures";
 
 beforeEach(() => {
     cleanup();

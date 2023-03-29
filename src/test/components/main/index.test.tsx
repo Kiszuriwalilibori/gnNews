@@ -8,8 +8,8 @@ import { Provider } from "react-redux";
 import { Route, Routes } from "react-router";
 import { render, screen } from "@testing-library/react";
 import { HashRouter as Router } from "react-router-dom";
-import { fakeState, mainClassNames, sourceNameBR, sourceNameFR, sourceNamePL, articlesBR } from "../../../fixtures";
-
+import { mainClassNames } from "../../test-utils/fixtures";
+import { fakeState, articlesBR, sourceNameBR, sourceNameFR, sourceNamePL } from "../../test-utils/fixtures";
 beforeEach(() => {
     cleanup();
 });

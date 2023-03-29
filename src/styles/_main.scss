@@ -31,9 +31,12 @@
             color: white;
             padding-bottom: 10px;
             transition: transform 0.7s ease-in-out;
-            max-height: 540px;
+            max-height: 440px;
+            transition: max-height 1s;
+            overflow-y: hidden;
             &:hover {
-                max-height: unset;
+                max-height: 100%;
+                overflow-y: visible;
             }
             & :not(:first-child) {
                 padding: 10px 15px;
@@ -57,9 +60,10 @@
             &__title {
                 line-height: 1.7;
                 font-weight: bold;
-                max-height: 110px;
+                max-height: 120px;
+                max-height: 100px;
                 width: 100%;
-                // overflow: auto;
+                overflow: hidden;
                 word-wrap: break-word;
 
                 @include resizesOnHover;

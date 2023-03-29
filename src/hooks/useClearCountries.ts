@@ -4,6 +4,7 @@ import { useLocation } from "react-router";
 import { getCountryPaths, getSelectedCountryPath } from "../reduxware/selectors";
 import { useDispatchAction } from "../hooks/useDispatchAction";
 import { paths } from "../paths";
+import { useEffect } from "react";
 
 const useAdjustCountriesWithPathname = () => {
     const pathName = useLocation().pathname;
@@ -13,9 +14,11 @@ const useAdjustCountriesWithPathname = () => {
 
     if (!countryPaths.includes(pathName)) clearSelectedCountry();
 
-    if (selectedCountryPathName !== pathName && pathName !== paths.main) {
-        setSelectedCountry(pathName.split(paths.countries).join(""));
-    }
+    useEffect(() => {
+        if (selectedCountryPathName !== pathName && pathName !== paths.main) {
+            setSelectedCountry(pathName.split(paths.countries).join(""));
+        }
+    }, [selectedCountryPathName, pathName]);
 };
 
 export default useAdjustCountriesWithPathname;

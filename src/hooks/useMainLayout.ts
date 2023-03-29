@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
+import { useMemo } from "react";
+
 import Tile from "../components/main/tile";
 import ListItem from "../components/main/list";
 import { getNewsLayout } from "../reduxware/reducers/newsLayoutSlice";
-// import { LayoutLikeObject } from "../types";
-import { useMemo } from "react";
 import { useDispatchAction } from "./useDispatchAction";
-import { mainClassNames } from "../fixtures";
+import { LayoutLikeObject } from "../types";
 
-// const _ClassName: LayoutLikeObject = { list: "main main--withList", tile: "main main--withTiles" };
+export const mainClassNames: LayoutLikeObject = { list: "main--withList", tile: "main--withTiles" };
 
 export default function useMainLayout() {
     const layout = useSelector(getNewsLayout);

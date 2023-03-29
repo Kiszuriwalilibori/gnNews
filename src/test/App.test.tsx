@@ -6,7 +6,7 @@ import { act, screen } from "@testing-library/react";
 import { render } from "./test-utils/testing-library-utils";
 import App from "../App";
 import userEvent from "@testing-library/user-event";
-import { mainClassNames } from "../fixtures";
+import { mainClassNames } from "./test-utils/fixtures";
 
 describe("Given App component", () => {
     describe("when renders", () => {
@@ -14,7 +14,7 @@ describe("Given App component", () => {
             render(<App />);
             const list = screen.getByText("list");
             expect(list).toBeInTheDocument();
-            screen.debug(document.getElementsByTagName("main")[0]);
+
             // eslint-disable-next-line testing-library/no-node-access
             const listing = document.querySelector(".main--withList");
             expect(listing).toBeInTheDocument();
@@ -27,7 +27,6 @@ describe("Given App component", () => {
                 userEvent.click(list);
             });
 
-            screen.debug(document.getElementsByTagName("main")[0]);
             const tile = document.querySelector(".main--withTiles");
             expect(tile).toBeInTheDocument();
             const tiles = document.getElementsByClassName("tile");

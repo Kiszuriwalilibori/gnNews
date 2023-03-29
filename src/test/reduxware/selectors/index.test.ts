@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { createCountryNews } from "../../../reduxware/selectors";
-import { fakeState, fakeStateNoArticles } from "../../../fixtures";
+import { fakeStateNoArticles, fakeState } from "../../test-utils/fixtures";
 import { DataWithCountry } from "../../../types";
 
 describe("given createCountryNews function", () => {

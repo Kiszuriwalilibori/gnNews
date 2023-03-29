@@ -436,10 +436,13 @@ body {
   color: white;
   padding-bottom: 10px;
   transition: transform 0.7s ease-in-out;
-  max-height: 540px;
+  max-height: 440px;
+  transition: max-height 1s;
+  overflow-y: hidden;
 }
 .main--withTiles .tile:hover {
-  max-height: unset;
+  max-height: 100%;
+  overflow-y: visible;
 }
 .main--withTiles .tile :not(:first-child) {
   padding: 10px 15px;
@@ -464,13 +467,15 @@ body {
 .main--withTiles .tile__title {
   line-height: 1.7;
   font-weight: bold;
-  max-height: 110px;
+  max-height: 120px;
+  max-height: 100px;
   width: 100%;
+  overflow: hidden;
   word-wrap: break-word;
   transition: max-height 1s;
 }
 .main--withTiles .tile__title:hover {
-  max-height: 300px;
+  max-height: 100%;
 }
 .main--withTiles .tile__published {
   font-size: 16px;
@@ -487,7 +492,7 @@ body {
   transition: max-height 1s;
 }
 .main--withTiles .tile__description:hover {
-  max-height: 300px;
+  max-height: 100%;
 }
 .main--withList {
   background-color: var(--with-list-bg-color);
