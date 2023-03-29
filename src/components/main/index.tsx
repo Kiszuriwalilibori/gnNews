@@ -6,7 +6,7 @@ import { isEmpty } from "lodash";
 import Popup from "./popup";
 import NoArticles from "./noarticles";
 import useMainLayout from "../../hooks/useMainLayout";
-import useAdjustCountriesWithPathname from "../../hooks/useClearCountries";
+import useAdjustCountriesWithPathname from "../../hooks/useAdjustCountriesWithPathname";
 
 import { Article } from "../../types";
 import { getCountryNews } from "../../reduxware/selectors";

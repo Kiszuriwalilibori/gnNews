@@ -18,6 +18,9 @@
         justify-content: space-between;
         background-color: var(--with-tile-bg-color);
         padding: 10px;
+        @include tilesRearrange {
+            justify-content: center;
+        }
 
         & .tile {
             width: var(--tile-width);
@@ -32,10 +35,12 @@
             padding-bottom: 10px;
             transition: transform 0.7s ease-in-out;
             max-height: 440px;
-            transition: max-height 1s;
+            transition: max-height 0.7s ease-in-out;
+
             overflow-y: hidden;
             &:hover {
-                max-height: 100%;
+                animation: show-overflow 2s;
+                max-height: 100vh;
                 overflow-y: visible;
             }
             & :not(:first-child) {
@@ -112,5 +117,10 @@
                 line-height: 2;
             }
         }
+    }
+}
+@keyframes show-overflow {
+    from {
+        overflow: hidden;
     }
 }

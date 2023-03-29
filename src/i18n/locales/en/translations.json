@@ -8,5 +8,5 @@
     "footer": { "nonews": "No news to be displayed", "newsnumber": "Number of news: " },
     "listitem": { "publish": "Published: ", "source": "Source: ", "description": "Description: " },
     "modal": { "prompt": "Read full article" },
-    "main": { "noarticles": "No articles found" }
+    "main": { "noarticles": "No articles yet" }
 }

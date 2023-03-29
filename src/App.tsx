@@ -10,7 +10,7 @@ import useCheckOnline from "./hooks/useCheckOnline";
 
 import { Header, Footer, Main, Sidebar, NotFound } from "./components";
 import { getCountriesList } from "./reduxware/reducers/countriesSlice";
-import { countryCodes } from "./fixtures";
+import { countryCodes } from "./config";
 import { paths } from "./paths";
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
     const countries = useSelector(getCountriesList, shallowEqual);
     const isOnline = useCheckOnline();
 
-    // useEffect(() => {
-    //     isAPIKeyAvailable && isOnline && fetchNews(countryCodes);
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
+    useEffect(() => {
+        isAPIKeyAvailable && isOnline && fetchNews(countryCodes);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     if (!isAPIKeyAvailable) return null;
     if (!isOnline) return null;

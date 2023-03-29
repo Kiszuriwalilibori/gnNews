@@ -424,6 +424,11 @@ body {
   background-color: var(--with-tile-bg-color);
   padding: 10px;
 }
+@media (max-width: 958px) {
+  .main--withTiles {
+    justify-content: center;
+  }
+}
 .main--withTiles .tile {
   width: var(--tile-width);
   border-radius: 10px;
@@ -437,11 +442,12 @@ body {
   padding-bottom: 10px;
   transition: transform 0.7s ease-in-out;
   max-height: 440px;
-  transition: max-height 1s;
+  transition: max-height 0.7s ease-in-out;
   overflow-y: hidden;
 }
 .main--withTiles .tile:hover {
-  max-height: 100%;
+  animation: show-overflow 2s;
+  max-height: 100vh;
   overflow-y: visible;
 }
 .main--withTiles .tile :not(:first-child) {
@@ -475,7 +481,7 @@ body {
   transition: max-height 1s;
 }
 .main--withTiles .tile__title:hover {
-  max-height: 100%;
+  max-height: 100vh;
 }
 .main--withTiles .tile__published {
   font-size: 16px;
@@ -492,7 +498,7 @@ body {
   transition: max-height 1s;
 }
 .main--withTiles .tile__description:hover {
-  max-height: 100%;
+  max-height: 100vh;
 }
 .main--withList {
   background-color: var(--with-list-bg-color);
@@ -523,6 +529,11 @@ body {
   line-height: 2;
 }
 
+@keyframes show-overflow {
+  from {
+    overflow: hidden;
+  }
+}
 .not-found {
   position: fixed;
   top: 0;
