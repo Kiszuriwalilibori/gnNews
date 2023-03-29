@@ -12,7 +12,7 @@ Apka początkowo pobiera ze źródła artykuły pochodzące z kilku krajów i wy
 
 Do prawidłowego działania wymaga obecności klucza dostępu do [https://newsapi.org/s/poland-news-api]. Bez klucza wyświetli tylko ostrzeżenie.
 
-Do prawidłowego działania potrzebny jest także internet ;) Wprawdzie apka wyświtliłaby się z pustymi danymi ale brakowałoby flag i ogólnie nie wyglądałoby to dobrze. Zatem przy braku intenetu jest tylko pusty ekran z komantarzem
+Do prawidłowego działania potrzebny jest także internet ;) Wprawdzie apka wyświtliłaby się z pustymi danymi ale brakowałoby flag i ogólnie nie wyglądałoby to dobrze. Zatem przy braku intenetu jest tylko pusty ekran z komentarzem
 
 Użytkownik ma możliwość wyboru artykułów pochodzących z określonego państwa za pomocą przełączników w panelu bocznym.
 
@@ -21,6 +21,8 @@ Lista wyboru państwa w sidebarze generuje się dynamicznie, trafią tam państw
 Wybór państwa powoduje przeniesienie do podstrony państwa gdzie dostępne są tylko artykuły dla danego państwa.
 
 Przeniesienie się poprzez wpisanie adresu w pasku przeglądarki z powrotem do strony głównej powoduje wyczyszczenie kryterium państwa i wyzerowanie przełączników. W sumie zastanawiałem się co ma pokazywać strona główna czy też /countries/ i nie mam lepszego pomysłu - wszystkie artykuły z wszystkich krajów na stronie countries to brzmi logicznie, poza tym na dzień dobry może dobrze mieć dostęp do wszystkich danych a dopiero potem je zawężać.
+
+Przeniesienie się poprzez wpisanie w pasku adresu kodu państawa powoduje przeniesienie do właściwej podstrony i automatyczną aktualizację sidbara oraz wyświetlanej zawartości
 
 Do dyspozycji uzytkownika jest także guzik "Reset" realizujący tą sama ąkcję
 

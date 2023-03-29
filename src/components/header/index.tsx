@@ -5,6 +5,8 @@ import LayoutSwitch from "./layout-switch";
 import LanguageSwitch from "./language-switch";
 import Popup from "./popup";
 
+import { paths } from "../../paths";
+
 export default function Header() {
     const { t } = useTranslation();
 
@@ -15,7 +17,7 @@ export default function Header() {
             </div>
             <div className="header__element-container header__element-container--flowing ">
                 <div className="header__central">
-                    <Link to="/" style={{ textDecoration: "none" }}>
+                    <Link to={paths.main} style={{ textDecoration: "none" }}>
                         <h1 className="header__title">{t("header.title")}</h1>
                     </Link>
 

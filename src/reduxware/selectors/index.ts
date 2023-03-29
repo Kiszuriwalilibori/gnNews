@@ -5,6 +5,7 @@ import { getCountriesList } from "../reducers/countriesSlice";
 import { countriesPath } from "../../fixtures";
 import { isEmpty } from "lodash";
 import { DataWithCountry } from "../../types";
+import { paths } from "../../paths";
 export { getModal } from "../reducers/modalSlice";
 
 /*helpers */
@@ -44,6 +45,10 @@ const createIsCountrySelected = (country: string) => {
     return country === "" ? false : true;
 };
 
+const createSelectedCountryPath = (country: string) => {
+    return paths.countries + country;
+};
+
 const createCountryPaths = (codes: string[]) => {
     if (!codes || isEmpty(codes)) {
         return [];
@@ -63,3 +68,5 @@ export const getCountryNewsNumber = createSelector(getCountryNews, createCountry
 export const getCountryPaths = createSelector(getCountriesList, createCountryPaths);
 
 export const getIsCountrySelected = createSelector(getSelectedCountry, createIsCountrySelected);
+
+export const getSelectedCountryPath = createSelector(getSelectedCountry, createSelectedCountryPath);

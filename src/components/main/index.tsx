@@ -17,7 +17,7 @@ export default function Main() {
     const { mainClassName, MainItem } = useMainLayout();
 
     if (!countryNews || isEmpty(countryNews)) return <NoArticles />;
-    // if (!countryNews || isEmpty(countryNews)) return null;
+
     return (
         <main className={mainClassName}>
             {countryNews.map((article: Article) => {

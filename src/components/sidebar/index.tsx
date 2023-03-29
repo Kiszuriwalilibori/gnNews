@@ -10,15 +10,16 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import { shallowEqual, useSelector } from "react-redux";
+import { isEmpty } from "lodash";
+import { TFunction } from "i18next";
 
 import Flag from "./flag";
 
 import { countryList } from "../../fixtures";
+import { paths } from "../../paths";
 import { getSelectedCountry } from "../../reduxware/reducers/selectedCountrySlice";
 import { getCountriesList } from "../../reduxware/reducers/countriesSlice";
 import { useDispatchAction } from "../../hooks/useDispatchAction";
-import { isEmpty } from "lodash";
-import { TFunction } from "i18next";
 
 function getCountryName(code: string) {
     const capitalized = code.toUpperCase();
@@ -75,7 +76,7 @@ export function Sidebar(props: Props) {
                                         value={country}
                                         control={<Radio color="warning" />}
                                         label={getCountryName(country)}
-                                        onClick={() => navigate("/countries/" + country)}
+                                        onClick={() => navigate(paths.countries + country)}
                                     />
                                 </div>
                             );

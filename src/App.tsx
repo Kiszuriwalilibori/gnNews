@@ -11,6 +11,7 @@ import useCheckOnline from "./hooks/useCheckOnline";
 import { Header, Footer, Main, Sidebar, NotFound } from "./components";
 import { getCountriesList } from "./reduxware/reducers/countriesSlice";
 import { countryCodes } from "./fixtures";
+import { paths } from "./paths";
 
 function App() {
     const isAPIKeyAvailable = useCheckApiKey();
@@ -32,7 +33,7 @@ function App() {
             <section className="main-content">
                 <Sidebar />
                 <Routes>
-                    <Route path="/">
+                    <Route path={paths.main}>
                         <Route index element={<Main />} />
                         <Route path="countries">
                             <Route index element={<Main />} />

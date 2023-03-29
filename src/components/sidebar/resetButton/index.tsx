@@ -4,8 +4,10 @@ import { useCallback } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
 import { useDispatchAction } from "../../../hooks/useDispatchAction";
 import { getIsCountrySelected } from "../../../reduxware/selectors";
+import { paths } from "../../../paths";
 
 export default function ResetButton() {
     const { clearSelectedCountry } = useDispatchAction();
@@ -15,7 +17,7 @@ export default function ResetButton() {
 
     const clickHandler = useCallback(() => {
         clearSelectedCountry();
-        navigate("/countries/");
+        navigate(paths.countries);
     }, []);
 
     return (
