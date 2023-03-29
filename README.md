@@ -16,7 +16,7 @@ Do prawidłowego działania potrzebny jest także internet ;) Wprawdzie apka wy�
 
 Użytkownik ma możliwość wyboru artykułów pochodzących z określonego państwa za pomocą przełączników w panelu bocznym.
 
-Lista wyboru państwa w sidebarze generuje się dynamicznie, trafią tam państwa z początkowej listy jak powyżej, ale tylko jeżeli pobrane zostały dla nich artykuły( nie można wykluczyć, że lista artykułów w źródle jest pusta).
+Lista wyboru państwa w sidebarze generuje się dynamicznie, trafią tam państwa z początkowej listy jak powyżej, ale tylko jeżeli pobrane zostały dla nich artykuły( nie można wykluczyć, że lista artykułów w źródle jest pusta). Państwa są posortowane po kodzie
 
 Wybór państwa powoduje przeniesienie do podstrony państwa gdzie dostępne są tylko artykuły dla danego państwa.
 
@@ -56,6 +56,8 @@ Poza uzupełnieniem zawartości /i18n/locales/ należy conajmniej zmienić zawar
 Dla pełnego efektu także funkcję toDataLocale
 
 ## Uwagi i komentarze ogólne
+
+## Od 31 marca do 14 kwietnia jestem w żaden sposób niedostępny
 
 ### Slices i selektory
 

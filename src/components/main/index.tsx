@@ -6,13 +6,13 @@ import { isEmpty } from "lodash";
 import Popup from "./popup";
 import NoArticles from "./noarticles";
 import useMainLayout from "../../hooks/useMainLayout";
-import useClearCountries from "../../hooks/useClearCountries";
+import useAdjustCountriesWithPathname from "../../hooks/useClearCountries";
 
 import { Article } from "../../types";
 import { getCountryNews } from "../../reduxware/selectors";
 
 export default function Main() {
-    useClearCountries();
+    useAdjustCountriesWithPathname();
     const countryNews = useSelector(getCountryNews);
     const { mainClassName, MainItem } = useMainLayout();
 
