@@ -15,29 +15,22 @@ import { TFunction } from "i18next";
 
 import Flag from "./flag";
 
-import { countryList } from "../../fixtures";
 import { paths } from "../../paths";
 import { getSelectedCountry } from "../../reduxware/reducers/selectedCountrySlice";
-import { getCountriesList } from "../../reduxware/reducers/countriesSlice";
 import { useDispatchAction } from "../../hooks/useDispatchAction";
-import { getSortedCountriesList } from "../../reduxware/selectors";
-
-function getCountryName(code: string) {
-    const capitalized = code.toUpperCase();
-    return (countryList as { [key: string]: string })[capitalized] || code;
-}
+import { getSortedCountryCodesWithNames } from "../../reduxware/selectors";
 interface Props {
     t: TFunction<"translation", undefined, "translation">;
 }
 export function Sidebar(props: Props) {
-    // const countries = useSelector(getCountriesList, shallowEqual);
     const selectedCountry = useSelector(getSelectedCountry, shallowEqual);
-    const countries = useSelector(getSortedCountriesList);
+
     const { setSelectedCountry } = useDispatchAction();
 
-    // const { t } = useTranslation();
     const { t } = props;
     const navigate = useNavigate();
+
+    const sortedCountryCodesWithNames = useSelector(getSortedCountryCodesWithNames, shallowEqual);
 
     const handleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedCountry((event.target as HTMLInputElement).value);
@@ -56,7 +49,7 @@ export function Sidebar(props: Props) {
                 >
                     {t("sidebar.title")}
                 </FormLabel>
-                {countries && !isEmpty(countries) && (
+                {sortedCountryCodesWithNames && !isEmpty(sortedCountryCodesWithNames) && (
                     <RadioGroup
                         aria-labelledby="radio-buttons-group-label"
                         name="controlled-radio-buttons-group"
@@ -69,16 +62,16 @@ export function Sidebar(props: Props) {
                             },
                         }}
                     >
-                        {countries.map(country => {
+                        {sortedCountryCodesWithNames.map(country => {
                             return (
                                 <div className="country-container" key={uuid()}>
-                                    <Flag country={country} />
+                                    <Flag country={country.code} />
 
                                     <FormControlLabel
-                                        value={country}
+                                        value={country.code}
                                         control={<Radio color="warning" />}
-                                        label={getCountryName(country)}
-                                        onClick={() => navigate(paths.countries + country)}
+                                        label={country.name}
+                                        onClick={() => navigate(paths.countries + country.code)}
                                     />
                                 </div>
                             );

@@ -19,10 +19,10 @@ function App() {
     const countries = useSelector(getCountriesList, shallowEqual);
     const isOnline = useCheckOnline();
 
-    useEffect(() => {
-        isAPIKeyAvailable && isOnline && fetchNews(countryCodes);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // useEffect(() => {
+    //     isAPIKeyAvailable && isOnline && fetchNews(countryCodes);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
     if (!isAPIKeyAvailable) return null;
     if (!isOnline) return null;
