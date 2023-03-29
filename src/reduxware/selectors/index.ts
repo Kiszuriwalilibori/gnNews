@@ -10,6 +10,16 @@ export { getModal } from "../reducers/modalSlice";
 
 /*helpers */
 
+export const createSortedCountriesList = (countries: string[]) => {
+    if (!countries || isEmpty(countries)) {
+        return [];
+    } else {
+        const ary = [...countries];
+        const sortedCountries = ary.sort();
+        return sortedCountries;
+    }
+};
+
 export const createCountryNews = (news: DataWithCountry[], countryCode: string) => {
     if (news && !isEmpty(news)) {
         if (countryCode === "") {
@@ -70,3 +80,5 @@ export const getCountryPaths = createSelector(getCountriesList, createCountryPat
 export const getIsCountrySelected = createSelector(getSelectedCountry, createIsCountrySelected);
 
 export const getSelectedCountryPath = createSelector(getSelectedCountry, createSelectedCountryPath);
+
+export const getSortedCountriesList = createSelector(getCountriesList, createSortedCountriesList);

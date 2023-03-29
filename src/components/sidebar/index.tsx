@@ -20,6 +20,7 @@ import { paths } from "../../paths";
 import { getSelectedCountry } from "../../reduxware/reducers/selectedCountrySlice";
 import { getCountriesList } from "../../reduxware/reducers/countriesSlice";
 import { useDispatchAction } from "../../hooks/useDispatchAction";
+import { getSortedCountriesList } from "../../reduxware/selectors";
 
 function getCountryName(code: string) {
     const capitalized = code.toUpperCase();
@@ -29,8 +30,9 @@ interface Props {
     t: TFunction<"translation", undefined, "translation">;
 }
 export function Sidebar(props: Props) {
-    const countries = useSelector(getCountriesList, shallowEqual);
+    // const countries = useSelector(getCountriesList, shallowEqual);
     const selectedCountry = useSelector(getSelectedCountry, shallowEqual);
+    const countries = useSelector(getSortedCountriesList);
     const { setSelectedCountry } = useDispatchAction();
 
     // const { t } = useTranslation();
