@@ -1,5 +1,7 @@
 # gnNews
 
+UWAGA coś jest grubo nie tak z GH Pages. To co się linkuje to próbna wersja z początków roboty. Może sytuacja sie sama naprawi, ale jak nie to chyba będziecie musieli zainstalować to lokalnie
+
 ## Cele projektu
 
 -   Wykazać znajomość Reacta, Reduxa, TS, Redux toolkit, react-test-lib
@@ -88,3 +90,5 @@ Ogolnie dane są strasznie dziurawe. Radko kiedy jest ilustracja, z treścią po
 ## Testy
 
 Nie napisaliście czy jednostkowe, czy end-to end, więc jest taka sobie mieszanka. W testach pojawiają się także zasadniczo nieprawdopodbne scenariusze (wybrano państwo spoza listy państw do wyboru), ale tylko w celu prostszego sprawdzenia pustych danych.
+
+UWAGA coś jest grubo nie tak z GH Pages. To co się linkuje to próbna wersja z początków roboty. Może sytuacja sie sama naprawi, ale jak nie to chyba będziecie musieli zainstalować to lokalnie
