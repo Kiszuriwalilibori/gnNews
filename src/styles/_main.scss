@@ -1,7 +1,6 @@
 .main {
     overflow-y: auto;
     margin-bottom: var(--footer-height);
-    background-color: var(--with-list-bg-color);
     color: #1e1f24;
     &--empty {
         width: 100%;
@@ -81,29 +80,32 @@
             }
         }
     }
-    .listItem {
-        width: 100%;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.12);
-        border-bottom-width: thin;
-        padding: 20px;
-        transition: background-color 0.7s;
-        cursor: pointer;
-        &:hover {
-            background-color: #e3c021;
-        }
-        &__title {
-            font-size: 2 rem;
-            line-height: 2;
-            font-weight: bold;
-        }
-        &__published {
-            font-size: 1.6 rem;
-            line-height: 2;
-        }
-        &__source {
-            font-size: 1 rem;
-            line-height: 2;
+    &--withList {
+        background-color: var(--with-list-bg-color);
+        .listItem {
+            width: 100%;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.12);
+            border-bottom-width: thin;
+            padding: 20px;
+            transition: background-color 0.7s;
+            cursor: pointer;
+            &:hover {
+                background-color: #e3c021;
+            }
+            &__title {
+                font-size: 2 rem;
+                line-height: 2;
+                font-weight: bold;
+            }
+            &__published {
+                font-size: 1.6 rem;
+                line-height: 2;
+            }
+            &__source {
+                font-size: 1 rem;
+                line-height: 2;
+            }
         }
     }
 }

@@ -403,7 +403,6 @@ hr {
 .main {
   overflow-y: auto;
   margin-bottom: var(--footer-height);
-  background-color: var(--with-list-bg-color);
   color: #1e1f24;
 }
 .main--empty {
@@ -487,7 +486,10 @@ hr {
 .main--withTiles .tile__description:hover {
   max-height: 300px;
 }
-.main .listItem {
+.main--withList {
+  background-color: var(--with-list-bg-color);
+}
+.main--withList .listItem {
   width: 100%;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.12);
@@ -496,19 +498,19 @@ hr {
   transition: background-color 0.7s;
   cursor: pointer;
 }
-.main .listItem:hover {
+.main--withList .listItem:hover {
   background-color: #e3c021;
 }
-.main .listItem__title {
+.main--withList .listItem__title {
   font-size: 2 rem;
   line-height: 2;
   font-weight: bold;
 }
-.main .listItem__published {
+.main--withList .listItem__published {
   font-size: 1.6 rem;
   line-height: 2;
 }
-.main .listItem__source {
+.main--withList .listItem__source {
   font-size: 1 rem;
   line-height: 2;
 }

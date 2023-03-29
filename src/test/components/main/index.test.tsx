@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable testing-library/no-node-access */
 import Main from "../../../components/main";
 import { cleanup } from "@testing-library/react";
@@ -5,7 +6,7 @@ import { cleanup } from "@testing-library/react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { HashRouter as Router } from "react-router-dom";
 import { fakeState, mainClassNames, sourceNameBR, sourceNameFR, sourceNamePL, articlesBR } from "../../../fixtures";
 
@@ -78,6 +79,68 @@ describe("Given Main component", () => {
             expect(tile).toBeInTheDocument();
             const tiles = document.getElementsByClassName("tile");
             expect(tiles).not.toHaveLength(0);
+        });
+    });
+    describe("when renders with empty or falsey list of news in store", () => {
+        it("displays empty warning when news are empty", () => {
+            const initialState = {
+                newsData: { data: [] },
+                selectedCountry: { country: "pl" },
+                countries: { list: ["pl", "fr", "br"] },
+                newsLayout: { layout: "tile" },
+                articleModal: { modal: { isOpen: false } },
+            };
+            const store = createStore((state: unknown) => state, initialState);
+            render(
+                <Provider store={store}>
+                    <Router>
+                        <Routes>
+                            <Route>
+                                <Route index element={<Main />} />
+                            </Route>
+                        </Routes>
+                    </Router>
+                </Provider>
+            );
+            // eslint-disable-next-line testing-library/no-debugging-utils
+
+            const warning = screen.getByText("main.noarticles");
+            expect(warning).toBeInTheDocument();
+
+            const tiles = document.querySelector("." + mainClassNames.tile);
+            expect(tiles).toBeNull();
+            const list = document.querySelector("." + mainClassNames.list);
+            expect(list).toBeNull();
+        });
+        it("displays empty warning when news are falsey", () => {
+            const initialState = {
+                newsData: { data: undefined },
+                selectedCountry: { country: "pl" },
+                countries: { list: ["pl", "fr", "br"] },
+                newsLayout: { layout: "tile" },
+                articleModal: { modal: { isOpen: false } },
+            };
+            const store = createStore((state: unknown) => state, initialState);
+            render(
+                <Provider store={store}>
+                    <Router>
+                        <Routes>
+                            <Route>
+                                <Route index element={<Main />} />
+                            </Route>
+                        </Routes>
+                    </Router>
+                </Provider>
+            );
+            // eslint-disable-next-line testing-library/no-debugging-utils
+
+            const warning = screen.getByText("main.noarticles");
+            expect(warning).toBeInTheDocument();
+
+            const tiles = document.querySelector("." + mainClassNames.tile);
+            expect(tiles).toBeNull();
+            const list = document.querySelector("." + mainClassNames.list);
+            expect(list).toBeNull();
         });
     });
     describe("when selected country code is defined and correct", () => {
