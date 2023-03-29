@@ -1,7 +1,8 @@
 .header {
     @include boxshadow1;
-    @include limitedWidth;
-    @extend .flexRow;
+    @include selfCenter;
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     padding: 30px 8px;

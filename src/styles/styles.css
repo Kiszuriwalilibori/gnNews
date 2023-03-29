@@ -223,9 +223,10 @@ hr {
   flex-basis: 0;
 }
 
-.flexRow, .footer, .header {
-  display: flex;
-  flex-direction: row;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .main-content {
@@ -241,7 +242,6 @@ hr {
 }
 
 .App {
-  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   height: 100vh;
@@ -250,8 +250,9 @@ hr {
 
 .header {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
-  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   padding: 30px 8px;
@@ -376,8 +377,9 @@ hr {
 
 .footer {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
-  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
@@ -404,6 +406,7 @@ hr {
   overflow-y: auto;
   margin-bottom: var(--footer-height);
   color: #1e1f24;
+  width: 100%;
 }
 .main--empty {
   width: 100%;

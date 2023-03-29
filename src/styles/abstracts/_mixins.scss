@@ -18,8 +18,7 @@ $extendedmobile: 810px;
         0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
-@mixin limitedWidth {
-    max-width: 1200px;
+@mixin selfCenter {
     margin: 0 auto;
 }
 
