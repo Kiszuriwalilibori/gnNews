@@ -2,6 +2,10 @@
 
 UWAGA coś jest grubo nie tak z GH Pages. To co się linkuje to próbna wersja z początków roboty. Może sytuacja sie sama naprawi, ale jak nie to chyba będziecie musieli zainstalować to lokalnie
 
+UPDATE po dwóch tygodniach nieczynności. GH nadal nie dziala tak jak powinno, tzn nie przyjmuje nowych wersji na gh pages. Acz przyjął część starych w międzyczasie.
+Niestety sprawa jest poważniejsza, wersja wysłana na GH Pages rzuca błąd 426 (update to HTTP 2.0). I to jest chyba poza moja kontrolą.
+W tej sytuacji mogę tylko prosić o sklonowanie repo i stworzenie lokalnej działającej wersji (nie wiem dlaczego ale lokalnie na FF to działa prowidłowo)
+
 ## Cele projektu
 
 -   Wykazać znajomość Reacta, Reduxa, TS, Redux toolkit, react-test-lib
