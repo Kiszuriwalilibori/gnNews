@@ -1,5 +1,3 @@
-// import i18next, { ReactOptions, i18n, ThirdPartyModule, Resource, TOptions, StringMap, } from "i18next";
-
 import { AppDispatch } from "../AppProvider";
 type NewsLayout = "tile" | "list";
 
